@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stuti Singh</title>
+<meta name="description" content="Portfolio and resume of Stuti Singh">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f7f4;--panel:#fff;--ink:#12261d;--muted:#566a60;--line:#dde8e1;--accent:#1f6b4a;--accent2:#5fbf8f;--chip:#e2f1e8;--chipink:#17553a;--hero1:#08241a;--hero2:#14573d;--shadow:0 6px 24px rgba(20,80,55,.08)}
+@media (prefers-color-scheme:dark){:root{--bg:#09150f;--panel:#10241a;--ink:#eaf4ee;--muted:#9bb5a6;--line:#1f3a2d;--accent:#5fbf8f;--accent2:#7fd6a9;--chip:#1a3a2a;--chipink:#b6ebcf;--shadow:0 6px 24px rgba(0,0,0,.3)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.7 "Plus Jakarta Sans",system-ui,sans-serif}
+h1,h2,h3{margin:0;line-height:1.15}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+/* top bar */
+.top{position:sticky;top:0;z-index:10;background:rgba(8,36,26,.94);backdrop-filter:blur(10px);padding-top:env(safe-area-inset-top,0px)}
+.top nav{max-width:1040px;margin:0 auto;padding:0 20px;display:flex;gap:4px;overflow-x:auto;white-space:nowrap;justify-content:center}
+.top a{color:#bfe0cf;text-decoration:none;font-size:.92rem;font-weight:500;padding:16px 12px;border-bottom:2px solid transparent}
+.top a:hover,.top a.on{color:#fff;border-bottom-color:var(--accent2)}
+/* hero */
+.hero{background:radial-gradient(900px 400px at 80% -10%,var(--hero2),transparent 70%),var(--hero1);color:#fff;text-align:center;padding:84px 20px 96px}
+.mono{width:104px;height:104px;margin:0 auto 26px;border-radius:50%;display:grid;place-items:center;font:800 2.2rem "Plus Jakarta Sans",sans-serif;background:linear-gradient(135deg,var(--accent2),#1f6b4a);box-shadow:0 0 0 6px rgba(255,255,255,.12)}
+.hero h1{font-size:clamp(2.4rem,7vw,4rem);font-weight:800;letter-spacing:.04em}
+.hero .role{margin:14px 0 4px;font-size:1.2rem;color:#d3eee0;font-weight:500}
+.hero .loc{margin:0;color:#9fcdb4}
+.hero .cta{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border:0;border-radius:999px;padding:11px 24px;font:700 .95rem "Plus Jakarta Sans",sans-serif;cursor:pointer}
+.btn:hover{filter:brightness(1.1)}
+.btn.alt{background:transparent;border:1.5px solid currentColor;color:var(--accent)}
+.hero .btn.alt{color:#fff}
+/* sections */
+main{max-width:860px;margin:0 auto;padding:24px 20px 40px}
+section{padding:56px 0 8px}
+.head{display:flex;align-items:baseline;gap:14px;margin-bottom:24px}
+.num{font-weight:800;color:var(--accent);font-size:1rem}
+.head h2{font-size:1.9rem;font-weight:800}
+.head::after{content:"";flex:1;height:2px;background:var(--line);align-self:center}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-bottom:16px;box-shadow:var(--shadow)}
+.card h3{font-size:1.15rem;font-weight:700}
+.card .sub{color:var(--muted);margin-top:2px}
+.card .when{display:inline-block;background:var(--chip);color:var(--chipink);border-radius:999px;padding:2px 12px;font-size:.82rem;font-weight:700;margin-bottom:10px}
+.card p{margin:8px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+.chips li{background:var(--chip);color:var(--chipink);border-radius:999px;padding:3px 14px;font-size:.86rem;font-weight:500}
+.group h3{font-size:1rem;margin-bottom:2px}
+.contact{text-align:center}
+.contact .btn{margin:6px 6px 0}
+/* resume */
+.resume h1{font-size:1.9rem;font-weight:800}
+.resume .meta{color:var(--muted);font-size:.92rem}
+.resume h3{margin:20px 0 6px;font-size:.95rem;font-weight:800;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:4px}
+.resume p{margin:6px 0}
+.resume ul{margin:6px 0;padding-left:20px}
+footer{text-align:center;color:var(--muted);font-size:.9rem;padding:24px 20px 40px;padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+@media (max-width:560px){.top nav{justify-content:flex-start}.hero{padding:56px 20px 72px}.card{padding:18px}}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ .top,.hero,footer,section:not(#resume),.noprint{display:none!important}
+ main{padding:0;max-width:none}
+ section#resume{padding:0}
+ .head{display:none}
+ .card{border:0;box-shadow:none;padding:0}
+ .resume h3{color:#000}
+}
+</style>
+</head>
+<body>
+<header class="top"><nav aria-label="Sections">
+ <a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a href="#resume">Resume</a>
+</nav></header>
+
+<div class="hero">
+ <div class="mono" aria-hidden="true">SS</div>
+ <h1>STUTI SINGH</h1>
+ <p class="role">BBA DBE Student at IIM Bangalore · B.A. (Hons.) Economics, Gargi College</p>
+ <p class="loc">New Delhi, India</p>
+ <div class="cta">
+  <a class="btn" href="#contact">Get in touch</a>
+  <a class="btn alt" href="#resume">View resume</a>
+ </div>
+</div>
+
+<main>
+<section id="about">
+ <div class="head"><span class="num">01</span><h2>About</h2></div>
+ <div class="card">
+  <p>I am a student pursuing a BBA in Digital Business &amp; Entrepreneurship at IIM Bangalore and a B.A. (Hons.) in Economics at Gargi College, University of Delhi.</p>
+  <p>I am a Junior Member in the Operations Team of the Finance and Investment Club at Gargi College.</p>
+  <p>I am an active member of the Rotaract Club of Ingenious Minds, contributing to community outreach, social initiatives, and event planning. My hobbies include crocheting, reading, and watching TV shows.</p>
+ </div>
+</section>
+
+<section id="education">
+ <div class="head"><span class="num">02</span><h2>Education</h2></div>
+ <div class="card"><span class="when">2026 – 2029</span><h3>BBA – Digital Business &amp; Entrepreneurship</h3><div class="sub">Indian Institute of Management Bangalore</div></div>
+ <div class="card"><span class="when">2026 – Present</span><h3>B.A. (Hons.) Economics</h3><div class="sub">Gargi College, University of Delhi</div></div>
+ <div class="card"><span class="when">2026</span><h3>Class XII – Science</h3><div class="sub">Fr. Agnel School · CBSE · 94.6%</div></div>
+ <div class="card"><span class="when">2024</span><h3>Class X</h3><div class="sub">Fr. Agnel School · CBSE · 98.4%</div></div>
+</section>
+
+<section id="experience">
+ <div class="head"><span class="num">03</span><h2>Experience &amp; Leadership</h2></div>
+ <div class="card">
+  <span class="when">Aug 2026 – Present</span>
+  <h3>Junior Member, Operations Team</h3>
+  <div class="sub">Finance &amp; Investment Club, Gargi College</div>
+  <p>Assist in organising club activities, coordinating events, and managing operational responsibilities to ensure smooth execution of initiatives.</p>
+  <ul class="chips"><li>Event Coordination</li><li>Teamwork</li><li>Time Management</li></ul>
+ </div>
+ <div class="card">
+  <span class="when">2026 – Present</span>
+  <h3>Member</h3>
+  <div class="sub">Rotaract Club of Ingenious Minds (RCIM)</div>
+  <p>Contribute to community outreach, social impact initiatives, NGO collaborations, and the planning and execution of events.</p>
+  <ul class="chips"><li>Communication</li><li>Community Engagement</li><li>Event Management</li></ul>
+ </div>
+ <div class="card">
+  <span class="when">2024 – 25</span>
+  <h3>Academic Minister</h3>
+  <div class="sub">School Student Council</div>
+  <p>Led academic initiatives, organised inter-house competitions, coordinated educational activities, and introduced student-focused academic improvement initiatives.</p>
+  <ul class="chips"><li>Leadership</li><li>Problem-Solving</li><li>Initiative</li></ul>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="head"><span class="num">04</span><h2>Skills</h2></div>
+ <div class="card group"><h3>Subject skills</h3><ul class="chips"><li>Economics</li><li>Financial Analysis</li><li>Economic Research</li><li>Data Interpretation</li></ul></div>
+ <div class="card group"><h3>Tools</h3><ul class="chips"><li>Microsoft Excel</li><li>Microsoft PowerPoint</li><li>Microsoft Word</li></ul></div>
+ <div class="card group"><h3>Interpersonal</h3><ul class="chips"><li>Teamwork</li><li>Problem-Solving</li><li>Leadership</li><li>Communication</li><li>Event Coordination</li><li>Adaptability</li></ul></div>
+</section>
+
+
+<section id="contact">
+ <div class="head"><span class="num">05</span><h2>Contact</h2></div>
+ <div class="card contact">
+  <p>Open to opportunities, collaborations, internships, and meaningful conversations in economics, finance, research, and social impact.</p>
+  <a class="btn" href="mailto:stutisingh200802@gmail.com?subject=Hello%20Stuti">Email me</a>
+  <a class="btn alt" href="https://www.linkedin.com/in/stuti-singh-089349434/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  <p class="sub" style="color:var(--muted)">stutisingh200802@gmail.com</p>
+ </div>
+</section>
+
+<section id="resume">
+ <div class="head"><span class="num">06</span><h2>Resume</h2></div>
+ <div class="card resume">
+  <h1>Stuti Singh</h1>
+  <div class="meta">New Delhi, India · stutisingh200802@gmail.com · linkedin.com/in/stuti-singh-089349434</div>
+  <h3>PROFILE</h3>
+  <p>BBA (Digital Business &amp; Entrepreneurship) student at IIM Bangalore and B.A. (Hons.) Economics student at Gargi College, University of Delhi. Open to opportunities and internships in economics, finance, research, and social impact.</p>
+  <h3>EXPERIENCE &amp; LEADERSHIP</h3>
+  <p><strong>Junior Member, Operations Team</strong>, Finance &amp; Investment Club, Gargi College (Aug 2026 – Present)</p>
+  <ul><li>Assist in organising club activities, coordinating events, and managing operational responsibilities for smooth execution of initiatives.</li></ul>
+  <p><strong>Member</strong>, Rotaract Club of Ingenious Minds (2026 – Present)</p>
+  <ul><li>Contribute to community outreach, social impact initiatives, NGO collaborations, and event planning and execution.</li></ul>
+  <p><strong>Academic Minister</strong>, School Student Council (2024 – 25)</p>
+  <ul><li>Led academic initiatives, organised inter-house competitions, coordinated educational activities, and introduced student-focused academic improvement initiatives.</li></ul>
+  <h3>EDUCATION</h3>
+  <p><strong>BBA, Digital Business &amp; Entrepreneurship</strong>, IIM Bangalore (2026 – 2029)<br><strong>B.A. (Hons.) Economics</strong>, Gargi College, University of Delhi (2026 – Present)<br>Class XII (Science), Fr. Agnel School, CBSE, 2026, 94.6%<br>Class X, Fr. Agnel School, CBSE, 2024, 98.4%</p>
+  <h3>SKILLS</h3>
+  <p><strong>Subject:</strong> Economics, Financial Analysis, Economic Research, Data Interpretation<br><strong>Tools:</strong> Microsoft Excel, PowerPoint, Word<br><strong>Interpersonal:</strong> Teamwork, Problem-Solving, Leadership, Communication, Event Coordination, Adaptability</p>
+ </div>
+ <p class="noprint" style="text-align:center"><button class="btn" type="button" onclick="window.print()">Print / save resume as PDF</button></p>
+</section>
+</main>
+<footer>STUTI SINGH · New Delhi, India</footer>
+<script>
+(function(){
+ var links=[].slice.call(document.querySelectorAll('.top a'));
+ if(!('IntersectionObserver' in window))return;
+ var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}});
+ },{rootMargin:'-30% 0px -60% 0px'});
+ links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io.observe(s)});
+})();
+</script>
+</body>
+</html>
